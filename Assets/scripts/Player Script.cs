@@ -2,6 +2,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public float playerspeed = 5;
+    public GameObject projectile;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,9 +26,12 @@ public class PlayerScript : MonoBehaviour
         transform.position = new Vector3(10.9f, transform.position.y,0);
 
         }
-        if(transform.position.x<= 11){
+        if(transform.position.x>= 11){
         transform.position = new Vector3(-10.9f, transform.position.y,0);
         
-        }  
+        }  if (Input.GetKeyDown(KeyCode.Space)) {
+            Instantiate(projectile, this.transform.position, this.transform.rotation);
+        }
+        
     }
 }
