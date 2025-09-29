@@ -21,11 +21,11 @@ public class enemy : MonoBehaviour
     }
     private void OnTriggerEnter2d(Collider2D other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Square")
         {
             Debug.Log("Hit: " + other); 
         }
-        if(other.tag == "Laser")
+        if(other.tag == "Bullet")
         {
             Destroy(gameObject); 
         }
