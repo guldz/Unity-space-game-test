@@ -3,10 +3,11 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     public float speed; 
+    EnemySpawnScript espawn; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        espawn = GameObject.Find("enemyspawner").GetComponent<EnemySpawnScript>(); 
     }
 
     // Update is called once per frame
@@ -19,14 +20,18 @@ public class enemy : MonoBehaviour
             transform.position = new Vector3 (Random.Range (-8, 8), 5.5f, 0);
         }
     }
-    private void OnTriggerEnter2d(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Square")
+        if(other.tag == "Player")
         {
-            Debug.Log("Hit: " + other); 
+            Debug.Log("Hit: " + other);
+            espawn.enemyCounter = espawn.enemyCounter - 1; 
+            Destroy(gameObject); 
         }
         if(other.tag == "Bullet")
         {
+            Debug.Log("Hit by " + other);
+            espawn.enemyCounter = espawn.enemyCounter - 1; 
             Destroy(gameObject); 
         }
         

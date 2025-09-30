@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemySpawnScript : MonoBehaviour
 {
  public GameObject enemyShip;
-    private int enemyCounter=0; 
-    private GameObject player;
+    public int enemyCounter=0; 
+    public GameObject player;
     
     void Start()
     {
@@ -37,7 +37,7 @@ public class EnemySpawnScript : MonoBehaviour
                 enemyCounter++;
 
                 
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(1);
             }
             else yield return null; 
             

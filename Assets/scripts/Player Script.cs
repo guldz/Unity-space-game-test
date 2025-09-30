@@ -32,6 +32,10 @@ public class PlayerScript : MonoBehaviour
         }  if (Input.GetKeyDown(KeyCode.Space)) {
             Instantiate(projectile, this.transform.position, this.transform.rotation);
         }
+        //public void TakingDamage(int damageTaken);
+        //playerHealth = playerHealth - damageTaken;
+        //if(playerHealth <= 0)
+        //Destroy(GameObject);
         
     }
 }
