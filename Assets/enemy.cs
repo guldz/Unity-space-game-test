@@ -24,9 +24,10 @@ public class enemy : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            other.transform.GetComponent<PlayerScript>().TakingDamage(1);
             Debug.Log("Hit: " + other);
             espawn.enemyCounter = espawn.enemyCounter - 1; 
-            Destroy(gameObject); 
+            //Destroy(gameObject); 
         }
         if(other.tag == "Bullet")
         {
@@ -34,6 +35,7 @@ public class enemy : MonoBehaviour
             espawn.enemyCounter = espawn.enemyCounter - 1; 
             Destroy(gameObject); 
         }
+        
         
     }
 }
