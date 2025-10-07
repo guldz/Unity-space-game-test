@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UpdateScore(1);
+        UpdateScore(0);
     }
     
 
