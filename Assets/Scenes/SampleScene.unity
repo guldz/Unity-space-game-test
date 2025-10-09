@@ -255,6 +255,7 @@ MonoBehaviour:
   - {fileID: 731581471}
   - {fileID: 922457166}
   - {fileID: 593971773}
+  playerHealth: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +405,7 @@ GameObject:
   - component: {fileID: 593971776}
   - component: {fileID: 593971775}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: LIfe 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,7 +700,7 @@ GameObject:
   - component: {fileID: 731581474}
   - component: {fileID: 731581473}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Life 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +822,7 @@ GameObject:
   - component: {fileID: 922457169}
   - component: {fileID: 922457168}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Life 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

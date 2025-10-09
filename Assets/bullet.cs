@@ -3,6 +3,7 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public float bulletSpeed = 1.0f; 
+    public int playerHealth =3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,10 +18,14 @@ public class bullet : MonoBehaviour
         transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime); 
 
     }
-private void OnCollisionEnter2D(Collision2D collision) 
+private void OnTriggerEnter2D(Collider2D other)
 {
-  
+  if (other.tag == "enemy")
+{
+  Debug.Log("Hit: " + other);
   Destroy(gameObject); 
+}
+
 }
 
 }
