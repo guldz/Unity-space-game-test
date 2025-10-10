@@ -18,15 +18,18 @@ public int playerHealth = 3;
         healthimg[0].SetActive(true);
         healthimg[1].SetActive(true);
         healthimg[2].SetActive(true);
+        
     }       
     
      public void TakingDamage(int damageTaken)
+        
         {  
-        if(playerHealth <= 1)
-        healthimg[1].SetActive(false);
-        
-        
+        playerHealth = playerHealth - damageTaken;
+        //if(playerHealth <= 2)
+        healthimg[0].SetActive(false);
         }
+    
+
     
     //gör kod om <= mindre än 2 lägg health img til .SetActive(false); eller active?
     //if(playerHealth <= 0)

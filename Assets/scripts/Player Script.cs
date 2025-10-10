@@ -4,6 +4,7 @@ public class PlayerScript : MonoBehaviour
     public float playerspeed = 5;
     public int playerHealth = 3; 
     public GameObject projectile;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,6 +39,7 @@ public class PlayerScript : MonoBehaviour
     }
         public void TakingDamage(int damageTaken)
         {  
+            //kör TakingDamage(skada) i healthbar.cs
         playerHealth = playerHealth - damageTaken;
         if(playerHealth <= 0)
         Destroy(gameObject);
