@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class PlayerScript : MonoBehaviour
 {
     public float playerspeed = 5;
     public int playerHealth = 3; 
     public GameObject projectile;
+    public GameObject health; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
          transform.position = new Vector3(0, -3.5f, 0);
+         health = GameObject.Find("Canvas");
     }
 
     // Update is called once per frame
@@ -38,8 +41,9 @@ public class PlayerScript : MonoBehaviour
         
     }
         public void TakingDamage(int damageTaken)
-        {  
-            //kör TakingDamage(skada) i healthbar.cs
+        {
+        //kör TakingDamage(skada) i healthbar.cs
+        health.transform.GetComponent<healthbar>().TakingDamage(damageTaken); 
         playerHealth = playerHealth - damageTaken;
         if(playerHealth <= 0)
         Destroy(gameObject);

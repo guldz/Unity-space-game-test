@@ -15,18 +15,23 @@ public int playerHealth = 3;
     // Update is called once per frame
     void Update()
     {
-        healthimg[0].SetActive(true);
-        healthimg[1].SetActive(true);
-        healthimg[2].SetActive(true);
+        
         
     }       
     
      public void TakingDamage(int damageTaken)
-        
-        {  
+        {
         playerHealth = playerHealth - damageTaken;
-        //if(playerHealth <= 2)
+        if(playerHealth == 2)
         healthimg[0].SetActive(false);
+        if (playerHealth == 1)
+        healthimg[1].SetActive(false);
+        if (playerHealth == 0)
+        healthimg[2].SetActive(false);
+
+
+        //healthimg[1].SetActive(false);
+        //healthimg[2].SetActive(false);
         }
     
 
