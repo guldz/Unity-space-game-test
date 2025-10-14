@@ -45,8 +45,11 @@ public class PlayerScript : MonoBehaviour
         //kör TakingDamage(skada) i healthbar.cs
         health.transform.GetComponent<healthbar>().TakingDamage(damageTaken); 
         playerHealth = playerHealth - damageTaken;
-        if(playerHealth <= 0)
+        if(playerHealth <= 0)     
+        {
         Destroy(gameObject);
+        SceneManager.LoadSceneAsync(2);
+        }
         
         
 
