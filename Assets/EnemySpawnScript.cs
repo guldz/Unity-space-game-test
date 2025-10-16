@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawnScript : MonoBehaviour
 {
- public GameObject enemyShip;
+    public GameObject enemyShip;
     public int enemyCounter=0; 
     public GameObject player;
     
