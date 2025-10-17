@@ -4,10 +4,11 @@ public class shieldblockscript : MonoBehaviour
 {
     public float speed; 
     shieldspawn shspawn;
+    public GameObject shield;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        shspawn =  GameObject.Find("shieldspawner").GetComponent<shieldspawn>();
+        shspawn =  GameObject.Find("SheildSpawn").GetComponent<shieldspawn>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,14 @@ public class shieldblockscript : MonoBehaviour
         if(other.tag == "Player")
         {
             Destroy(gameObject); 
+        }
+        {
+         shield.SetActive(true);
+
+        }
+        if(other.tag == "Bullet")
+        {
+            Destroy(gameObject);
         }
     }
 }

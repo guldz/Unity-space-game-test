@@ -6,12 +6,16 @@ public class PlayerScript : MonoBehaviour
     public int playerHealth = 3; 
     public GameObject projectile;
     public GameObject health; 
+    public GameObject shield; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+         shield.SetActive(false);
          transform.position = new Vector3(0, -3.5f, 0);
          health = GameObject.Find("Canvas");
+         //sätt en timer och coroutine som i enemyspawner utan någon if och while 
+         //StartCoroutine(shield()); 
     }
 
     // Update is called once per frame
@@ -38,6 +42,8 @@ public class PlayerScript : MonoBehaviour
             Instantiate(projectile, this.transform.position, this.transform.rotation);
         }
         
+       
+        
         
     }
         public void TakingDamage(int damageTaken)
@@ -50,9 +56,6 @@ public class PlayerScript : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadSceneAsync(2);
         }
-        
-        
-
         }
         
 

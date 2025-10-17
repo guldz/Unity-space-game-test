@@ -33,9 +33,9 @@ public class shieldspawn : MonoBehaviour
                 shieldcounter++;
 
                 
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(20);
             }
-            else yield return null; 
+            else yield return null;  //lägg till en infinate spawn som du gjorde i enemy script espawn.enemyCounter = espawn.enemyCounter - 1;
 
 
         }
